@@ -1,0 +1,542 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: arial; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%; }
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace; }
+
+small {
+  font-size: 12px; }
+
+ul,
+ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+legend {
+  color: #000; }
+
+fieldset,
+img {
+  border: 0;
+  width: 100%;
+  display: block; }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 195271 */
+  src: url("//at.alicdn.com/t/font_zino49v6idlsor.eot");
+  src: url("//at.alicdn.com/t/font_zino49v6idlsor.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_zino49v6idlsor.woff") format("woff"), url("//at.alicdn.com/t/font_zino49v6idlsor.ttf") format("truetype"), url("//at.alicdn.com/t/font_zino49v6idlsor.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100px; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; }
+
+#mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999 !important;
+  display: none; }
+  #mask img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+#totast {
+  width: 60%;
+  height: 0.8rem;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  bottom: 30%;
+  left: 20%;
+  border-radius: 0.15rem;
+  display: none; }
+  #totast #tip {
+    font-size: 0.4rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.8rem; }
+
+header {
+  width: 100%;
+  height: 0.88rem;
+  background: #e4366b; }
+  header ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff; }
+    header ul li {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center; }
+    header ul li:nth-child(1),
+    header ul li:nth-child(3) {
+      width: 1.2rem; }
+      header ul li:nth-child(1) span,
+      header ul li:nth-child(3) span {
+        display: block;
+        width: 1.2rem;
+        height: 0.6rem;
+        font-size: 0.32rem;
+        color: #fff;
+        font-weight: bold;
+        background: -webkit-linear-gradient(top, #ff8bc0, #e4366b);
+        border-radius: 0.1rem;
+        text-align: center;
+        line-height: 0.6rem;
+        margin-right: 0.2rem;
+        margin-left: 0.2rem; }
+    header ul li:nth-child(1) {
+      font-size: 0.4rem;
+      text-shadow: 1px 1px 1px #000; }
+      header ul li:nth-child(1) i.iconfont {
+        font-size: 0.6rem; }
+    header ul li:nth-child(3) .iconfont {
+      font-size: 0.4rem; }
+    header ul li:nth-child(2) {
+      flex: 1;
+      font-size: 0.4rem; }
+      header ul li:nth-child(2) .searchBox {
+        width: 100%;
+        height: 60%;
+        background: #fff;
+        border-radius: 0.1rem;
+        display: flex;
+        align-items: center; }
+        header ul li:nth-child(2) .searchBox i.iconfont {
+          font-size: 0.35rem;
+          margin-top: 0.03rem;
+          color: #999; }
+        header ul li:nth-child(2) .searchBox span {
+          flex: 1;
+          display: block;
+          font-size: 0.18rem;
+          color: #999; }
+
+section {
+  flex: 1;
+  overflow-y: auto; }
+  section #homeContent .swiper-container {
+    width: 100%;
+    height: 3rem;
+    background: #f66; }
+  section #homeContent .proList li {
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    display: flex;
+    position: relative; }
+    section #homeContent .proList li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      transform-origin: 0 0;
+      transform: scaleY(0.5); }
+    section #homeContent .proList li .proImg {
+      width: 2rem;
+      height: 1.8rem;
+      margin: 0.1rem; }
+      section #homeContent .proList li .proImg img {
+        width: 100%;
+        height: 100%; }
+    section #homeContent .proList li .proInfo {
+      flex: 1;
+      margin-right: 0.1rem;
+      position: relative; }
+      section #homeContent .proList li .proInfo p {
+        width: 100%; }
+        section #homeContent .proList li .proInfo p:nth-child(1) {
+          margin-top: 0.2rem;
+          line-height: 0.4rem;
+          font-size: 0.3rem;
+          display: -webkit-box;
+          overflow: hidden;
+          white-space: normal !important;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        section #homeContent .proList li .proInfo p:nth-child(2) {
+          color: #f66; }
+          section #homeContent .proList li .proInfo p:nth-child(2) span {
+            font-size: 0.32rem;
+            color: #f66;
+            font-weight: 900; }
+          section #homeContent .proList li .proInfo p:nth-child(2) del {
+            color: #999;
+            margin-left: 0.2rem; }
+        section #homeContent .proList li .proInfo p:nth-child(3) {
+          font-size: 0.28rem; }
+      section #homeContent .proList li .proInfo span.cartBtn {
+        position: absolute;
+        text-align: center;
+        bottom: 0.2rem;
+        right: 0.2rem;
+        display: block;
+        width: 1.2rem;
+        height: 0.6rem;
+        background: -webkit-linear-gradient(top, #ff8bc0, #e4366b); }
+        section #homeContent .proList li .proInfo span.cartBtn .iconfont {
+          color: #fff;
+          font-size: 0.4rem; }
+  section #detailContent {
+    width: 100%;
+    height: 100%; }
+    section #detailContent #detailSwiper {
+      width: 100%;
+      height: 100%;
+      background-color: #007AFF; }
+      section #detailContent #detailSwiper #proSwiper {
+        width: 100%;
+        height: 5rem; }
+  section #userContent .proList li {
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    display: flex;
+    position: relative; }
+    section #userContent .proList li .proImg {
+      width: 2rem;
+      height: 1.8rem;
+      margin: 0.1rem; }
+      section #userContent .proList li .proImg img {
+        width: 100%;
+        height: 100%; }
+    section #userContent .proList li .proInfo {
+      flex: 1;
+      margin-right: 0.1rem; }
+      section #userContent .proList li .proInfo p {
+        width: 100%; }
+        section #userContent .proList li .proInfo p:nth-child(1) {
+          margin-top: 0.3rem;
+          margin-left: 0.15rem;
+          line-height: 0.4rem;
+          font-size: 0.4rem;
+          font-weight: bold; }
+        section #userContent .proList li .proInfo p:nth-child(2) {
+          display: flex; }
+          section #userContent .proList li .proInfo p:nth-child(2) span {
+            flex: 1;
+            margin-left: 0.15rem;
+            margin-top: 0.4rem;
+            background: -webkit-linear-gradient(top, #ff8bc0, #e4366b);
+            height: 0.8rem;
+            font-size: 0.32rem;
+            color: #fff;
+            text-align: center;
+            line-height: 0.8rem;
+            font-weight: 900;
+            border-radius: 0.2rem; }
+  section #loginContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem 0.2rem; }
+    section #loginContent input {
+      display: block;
+      flex: 1;
+      height: 0.8rem;
+      margin-bottom: 0.5rem;
+      text-indent: 0.15rem;
+      border-radius: 0.15rem;
+      font-size: 0.32rem;
+      color: #ccc; }
+      section #loginContent input:nth-child(3) {
+        border: 0;
+        color: #fff;
+        background: -webkit-linear-gradient(top, #ff8bc0, #e4366b);
+        font-size: 0.32rem;
+        font-weight: bold; }
+  section #registerContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem 0.2rem; }
+    section #registerContent input {
+      display: block;
+      flex: 1;
+      height: 0.8rem;
+      margin-bottom: 0.5rem;
+      text-indent: 0.15rem;
+      border-radius: 0.15rem;
+      font-size: 0.32rem;
+      color: #ccc; }
+      section #registerContent input:nth-child(4) {
+        border: 0;
+        color: #fff;
+        background: -webkit-linear-gradient(top, #ff8bc0, #e4366b);
+        font-size: 0.32rem;
+        font-weight: bold; }
+  section #addEditContent .proList li {
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    display: flex;
+    position: relative; }
+    section #addEditContent .proList li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      transform-origin: 0 0;
+      transform: scaleY(0.5); }
+    section #addEditContent .proList li .proImg {
+      width: 2rem;
+      height: 1.8rem;
+      margin: 0.1rem; }
+      section #addEditContent .proList li .proImg img {
+        width: 100%;
+        height: 100%; }
+    section #addEditContent .proList li .proInfo {
+      flex: 1;
+      margin-right: 0.1rem; }
+      section #addEditContent .proList li .proInfo p {
+        width: 100%; }
+        section #addEditContent .proList li .proInfo p:nth-child(1) {
+          margin-top: 0.2rem;
+          line-height: 0.28rem;
+          font-size: 0.24rem;
+          display: -webkit-box;
+          overflow: hidden;
+          white-space: normal !important;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical; }
+        section #addEditContent .proList li .proInfo p:nth-child(2) {
+          font-size: 0.3rem;
+          margin-top: 0.05rem; }
+        section #addEditContent .proList li .proInfo p:nth-child(3) {
+          font-size: 0.3rem; }
+          section #addEditContent .proList li .proInfo p:nth-child(3) span {
+            color: #e4366b;
+            font-size: 0.3rem;
+            font-weight: bold; }
+        section #addEditContent .proList li .proInfo p:nth-child(4) {
+          display: flex; }
+          section #addEditContent .proList li .proInfo p:nth-child(4) span {
+            display: block;
+            line-height: 0.4rem;
+            flex: 1;
+            border: 2px solid #ccc;
+            text-align: center; }
+            section #addEditContent .proList li .proInfo p:nth-child(4) span:nth-child(2) {
+              border-left: 0;
+              border-right: 0; }
+  section #cartContent {
+    width: 100%; }
+    section #cartContent #cartList {
+      width: 100%; }
+      section #cartContent #cartList .cartItem {
+        width: 100%;
+        height: 2rem;
+        position: relative; }
+        section #cartContent #cartList .cartItem .deleteItem {
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: #eee;
+          width: 1.2rem;
+          line-height: 2rem;
+          font-size: 0.48rem;
+          color: #e4366b;
+          text-align: center; }
+        section #cartContent #cartList .cartItem .itemBox {
+          display: flex;
+          background-color: #fff;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0; }
+          section #cartContent #cartList .cartItem .itemBox .itemImg {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin: 0.1rem; }
+            section #cartContent #cartList .cartItem .itemBox .itemImg img {
+              width: 100%;
+              height: 100%; }
+          section #cartContent #cartList .cartItem .itemBox .itemInfo {
+            flex: 1;
+            margin-top: 0.14rem;
+            position: relative;
+            margin-right: 0.2rem; }
+            section #cartContent #cartList .cartItem .itemBox .itemInfo P {
+              width: 100%;
+              font-size: 0.34rem;
+              line-height: 0.42rem;
+              margin-top: 0.01rem; }
+              section #cartContent #cartList .cartItem .itemBox .itemInfo P:nth-child(1) {
+                display: -webkit-box;
+                overflow: hidden;
+                white-space: normal !important;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical; }
+              section #cartContent #cartList .cartItem .itemBox .itemInfo P:nth-child(3) {
+                color: #333; }
+        section #cartContent #cartList .cartItem:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: #000;
+          transform-origin: 0 0;
+          transform: scaleY(0.5); }
+
+footer {
+  width: 100%;
+  height: 1rem;
+  background-color: #333; }
+  footer ul {
+    widows: 100%;
+    height: 100%;
+    display: flex; }
+    footer ul li {
+      flex: 1;
+      border-top: 0.06rem solid transparent;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff; }
+      footer ul li i.iconfont {
+        font-size: 0.4rem; }
+      footer ul li span {
+        font-size: 0.18rem; }
+  footer #detailFooter ul {
+    widows: 100%;
+    height: 100%;
+    display: flex; }
+    footer #detailFooter ul li {
+      flex: 1;
+      font-size: 0.36rem;
+      line-height: 1rem;
+      text-align: center;
+      color: #fff; }
+
+.acive {
+  border-color: #e4366b;
+  color: #e4366b; }
+
+/*# sourceMappingURL=style.css.map */
